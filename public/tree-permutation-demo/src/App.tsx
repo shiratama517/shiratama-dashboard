@@ -487,7 +487,7 @@ export default function App() {
               gridColumn: "1 / -1",
             }}
           >
-            <div style={{ fontSize: 12, opacity: 0.85 }}>f_T（サイクル表記）</div>
+            <div style={{ fontSize: 12, opacity: 0.85 }}>Moszkowskiの対応（サイクル表記）</div>
             <div style={{ fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace" }}>
               {fTCycles.length === 0
                 ? "( )"
