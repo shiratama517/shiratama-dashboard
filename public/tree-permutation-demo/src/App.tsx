@@ -22,7 +22,7 @@ export default function App() {
   const [edges, setEdges] = useState<Edge[]>([]);
   const [edgeStart, setEdgeStart] = useState<number | null>(null);
   const [strictTree, setStrictTree] = useState(true);
-  const [reverseMultiply, setReverseMultiply] = useState(false);
+  const [reverseMultiply, setReverseMultiply] = useState(true);
   const [step, setStep] = useState(0); // 0..edges.length
   const [notice, setNotice] = useState<string | null>(null);
   const [draggingId, setDraggingId] = useState<number | null>(null);
@@ -215,7 +215,7 @@ export default function App() {
                   setNotice(null);
                 }}
               />
-              掛け算順を逆にする
+              掛け算順を上からにする
             </label>
           </div>
           <div style={{ display: "flex", gap: 8 }}>
