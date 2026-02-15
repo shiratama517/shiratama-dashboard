@@ -11,3 +11,8 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+// Tree Permutation Demo（Blade でラップして iframe 表示）
+Route::get('/tree-permutation', function () {
+    return view('tree-permutation');
+});
