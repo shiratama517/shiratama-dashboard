@@ -28,13 +28,12 @@
                     ダッシュボードへ
                 </a>
             </div>
-            <div class="flex-1 min-h-0 rounded-lg border border-[#e3e3e0] dark:border-[#3E3E3A] bg-white dark:bg-[#161615] overflow-x-auto">
+            <div class="flex-1 min-h-[60vh] flex flex-col min-w-0 rounded-lg border border-[#e3e3e0] dark:border-[#3E3E3A] overflow-x-auto overflow-y-hidden">
                 <iframe
                     id="tree-permutation-iframe"
                     src="{{ asset('tree-permutation-demo/dist/index.html') }}"
                     title="Tree Permutation Demo"
-                    class="w-full min-w-[1180px] border-0 block"
-                    style="min-height: 70vh;"
+                    class="w-full min-w-[1180px] border-0 block flex-1 min-h-0"
                 ></iframe>
             </div>
         </main>
@@ -48,9 +47,10 @@
                         if (!doc || !doc.body) return;
                         var style = doc.createElement('style');
                         style.textContent = [
-                            'html, body, #root { background: #FDFDFC !important; color: #1b1b18 !important; }',
-                            'body { place-items: start !important; justify-content: flex-start !important; align-items: flex-start !important; overflow-x: auto !important; min-height: 100vh !important; padding: 16px !important; }',
-                            '#root { width: 100%; min-width: min-content; }',
+                            'html, body, #root { background: #FDFDFC !important; color: #1b1b18 !important; height: 100% !important; min-height: 100% !important; box-sizing: border-box !important; }',
+                            'html { overflow: auto; }',
+                            'body { margin: 0 !important; display: flex !important; place-items: start !important; justify-content: flex-start !important; align-items: flex-start !important; overflow-x: auto !important; padding: 16px !important; }',
+                            '#root { width: 100% !important; min-width: min-content !important; flex: 1 1 auto !important; min-height: 0 !important; }',
                             'button { background-color: #f5f5f4 !important; color: #1b1b18 !important; border-color: #e3e3e0 !important; }',
                             'button:hover { border-color: #a1a09a !important; }',
                             'button:disabled { opacity: 0.5; }',
