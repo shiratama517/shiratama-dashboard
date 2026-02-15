@@ -54,9 +54,9 @@ export default function App() {
     [n, edgesPrefix],
   );
 
-  // Canvas サイズ
-  const width = 760;
-  const height = 520;
+  // Canvas サイズ（表示エリア・頂点追加クリックエリア）
+  const width = 1080;
+  const height = 700;
 
   function clientToSvgPoint(
     clientX: number,
